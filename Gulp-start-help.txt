@@ -1,0 +1,31 @@
+Jos (npm\gulp.ps1 cannot be loaded because scripts is disabled on this system)
+    aja komento: Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    Poistaa eston ps1-tiedostojen ajolta (ilmeisesti kyseisessä sijainnissa?)
+    )Pitää ajaa joka kerta kun VS-code on käynnistetty(
+
+Tarkista että on asennettu
+    node -v
+    gulp -v
+        Antavat versioiden numerot jos on asennettu. (kaikki pitää olla asennettu)
+
+Jos paikallista gulp versiota ei ole, aja koodi:
+    npm install --save-dev gulp
+            (Asentaa gulp-komentorivin-apuohjelman)
+    Tarkista uudestaan että sekä CLI, että Local versiot on olemassa, komennolla
+        gulp -v
+            Jos on, aja komento:
+            gulp
+
+Pitäisi tulostaa ~seuraavaa:
+
+            Using gulpfile ~\"sijainti"
+            Starting 'default'...
+            Starting 'buildStyles'...
+            Finished 'buildStyles' after "aika" ms
+            Starting 'watchTask'...
+
+Jos on vielä ongelmia:
+    https://gulpjs.com/docs/en/getting-started/quick-start/
+
+Tässä vielä linkki videoon missä kerrotaan mitä tuo gulpfile.js tekee:
+    https://youtu.be/Sk5jMurFHCo?list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&t=616
