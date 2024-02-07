@@ -1,0 +1,62 @@
+@import 'var'; // Linking to file: Variables 
+@import 'base';
+ // var ja base tiedostolla pitää olla edessä alaviiva, että gulp ei koosta tätä tiedostoa css tiedostoksi
+
+ 
+/* -- styles -- */
+
+
+h1 {
+  color: $primary;
+}
+
+h1 {
+  a {
+    color: $primary2;
+    margin-bottom: $base-margin;
+  }
+}
+button {
+  color: white;
+  border: 3px;
+  background: $primary;
+  border-color: $primary2;
+  border-style: solid;
+  border-radius: $base-border-radius;
+  padding: $base-padding;
+}
+.error {
+  color: $error;
+  border-color: $error;
+  border-style: solid;
+  margin: $base-margin;
+  padding: $base-padding;
+  border-radius: $base-border-radius;
+  border-width: $base-border-thickness;
+}
+.notification {
+  color: $secondary;
+  border-color: $secondary;
+  border-style: solid; 
+  margin: $base-margin;
+  padding: $base-padding;
+  border-radius: $base-border-radius;
+  border-width: $base-border-thickness;
+}
+
+
+/*
+" muuttujat pitää tietenkin kääritellä ennen kun niitä käytetään. tyhmä minä... -_-' "
+
+[14:59:35] Starting 'buildStyles'...
+[14:59:35] 'buildStyles' errored after 10 ms 
+[14:59:35] Error in plugin "gulp-sass"       
+Message:
+    index.scss
+Error: Undefined variable.
+   ╷
+29 │   color: $primary;
+   │          ^^^^^^^^
+   ╵
+
+*/
