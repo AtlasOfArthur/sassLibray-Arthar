@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/* -- styles -- */
 * {
   color: inherit;
   margin: 0;
@@ -15,6 +14,10 @@ ul {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 hr {
   border: 0;
   border-top: 1px dotted #efefef;
@@ -24,13 +27,30 @@ img {
   max-width: 100%;
 }
 
-h1 {
-  color: #378cec;
+.card {
+  display: block;
+  padding: 0.75rem;
+  border: 3px solid #0ee864;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  margin: 30px;
+  max-width: 400px;
+}
+.card .card-title {
+  color: #7317c9;
+  font-size: 1rem;
+  padding-bottom: 0.75rem;
+  font-weight: bold;
+}
+.card .card-body {
+  font-size: 1rem;
+}
+.card .card-body a {
+  text-decoration: underline;
 }
 
-a {
-  text-decoration: none;
-  color: #21d265;
+/* -- styles -- */
+h1 {
+  color: #378cec;
 }
 
 h1 a {
