@@ -1,4 +1,18 @@
 @charset "UTF-8";
+/*
+.test-btn {
+    background-color: map-get($colors, "jade"); 
+}
+// >>>  _colors.scss generoidaan suoraan näitä värejä käyttäen kaikki mahdolliset taustavärit, ym, ym...
+*/
+/*
+@debug map-get($colors, "lightYellow");     // #ffffaa
+@debug map-has-key($colors, "lightOrange"); // true
+@debug map-has-key($colors, "terracotta");  // false
+@debug map-remove($colors, "red");          // Poistaa punaisen värin. Näyttää samalla koko listan
+@debug map-merge($colors, ("randomColor": #f0c)); // Lisää värin color mappiin
+@debug $colors; // Tulostaa konsoliin kaikki $ colors mapissa olevat arvot (ei äsken debugilla lisättyä kuitenkaan)
+*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   color: inherit;
@@ -25,6 +39,150 @@ hr {
 
 img {
   max-width: 100%;
+}
+
+.text-primary {
+  color: #378cec;
+}
+
+.bg-primary {
+  background-color: #378cec;
+}
+
+.text-primary2 {
+  color: #7317c9;
+}
+
+.bg-primary2 {
+  background-color: #7317c9;
+}
+
+.text-secondary {
+  color: #21d265;
+}
+
+.bg-secondary {
+  background-color: #21d265;
+}
+
+.text-error {
+  color: #da2222;
+}
+
+.bg-error {
+  background-color: #da2222;
+}
+
+.text-info {
+  color: #f6f63f;
+}
+
+.bg-info {
+  background-color: #f6f63f;
+}
+
+.text-lightJade {
+  color: #15ff99;
+}
+
+.bg-lightJade {
+  background-color: #15ff99;
+}
+
+.text-jade {
+  color: #00A36C;
+}
+
+.bg-jade {
+  background-color: #00A36C;
+}
+
+.text-blue {
+  color: blue;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.text-red {
+  color: red;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.text-pink {
+  color: pink;
+}
+
+.bg-pink {
+  background-color: pink;
+}
+
+.text-yellow {
+  color: yellow;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.text-lightYellow {
+  color: #ffffaa;
+}
+
+.bg-lightYellow {
+  background-color: #ffffaa;
+}
+
+.text-orange {
+  color: orange;
+}
+
+.bg-orange {
+  background-color: orange;
+}
+
+.text-lightOrange {
+  color: #ffe1aa;
+}
+
+.bg-lightOrange {
+  background-color: #ffe1aa;
+}
+
+.text-purple {
+  color: purple;
+}
+
+.bg-purple {
+  background-color: purple;
+}
+
+.text-gray {
+  color: gray;
+}
+
+.bg-gray {
+  background-color: gray;
+}
+
+.text-black {
+  color: black;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+.bg-white {
+  background-color: white;
 }
 
 .card {

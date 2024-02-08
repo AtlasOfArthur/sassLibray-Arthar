@@ -1,18 +1,52 @@
  // Theme colors ||| Variables  
-
  $primary: #378cec;
  $primary2: #7317c9;
  $secondary: #21d265;
  $error: #da2222;
  $info: #f6f63f; 
 
- // spacing ||| Variables 
+// color pallette ||| map
+$colors: (
+    "primary": $primary,
+    "primary2": $primary2,
+    "secondary": $secondary,
+    "error": $error,
+    "info": $info,
+    "lightJade": #15ff99,
+    "jade": #00A36C,
+    "blue": blue,
+    "red": red,
+    "pink": pink,
+    "yellow": yellow,
+    "lightYellow": #ffffaa,
+    "orange": orange,
+    "lightOrange": #ffe1aa,
+    "purple": purple,
+    "gray": gray,
+    "black": black,
+    "white": white
+);
+/*
+.test-btn {
+    background-color: map-get($colors, "jade"); 
+}
+// >>>  _colors.scss generoidaan suoraan näitä värejä käyttäen kaikki mahdolliset taustavärit, ym, ym...
+*/
 
+/*
+@debug map-get($colors, "lightYellow");     // #ffffaa
+@debug map-has-key($colors, "lightOrange"); // true
+@debug map-has-key($colors, "terracotta");  // false
+@debug map-remove($colors, "red");          // Poistaa punaisen värin. Näyttää samalla koko listan
+@debug map-merge($colors, ("randomColor": #f0c)); // Lisää värin color mappiin
+@debug $colors; // Tulostaa konsoliin kaikki $ colors mapissa olevat arvot (ei äsken debugilla lisättyä kuitenkaan)
+*/
+
+ // spacing ||| Variables 
  $base-padding: 0.75rem;
  $base-margin: 0.75rem;
 
  // Borders ||| Variables  
-
  $base-border-thickness: 3px;
  $base-border-radius: 20px;
 

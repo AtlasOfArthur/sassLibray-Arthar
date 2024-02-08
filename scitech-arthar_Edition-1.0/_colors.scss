@@ -1,0 +1,9 @@
+// https://youtu.be/I1lp8eSKmEs?list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&t=55
+@each $key, $val in $colors {
+    .text-#{$key} {
+        color: $val;
+    }
+    .bg-#{$key} {
+        background-color: $val; // Tuottaa css tiedostoon kaikki värit. Esim: .bg-primary { background-color: #378cec; }
+    }
+}
