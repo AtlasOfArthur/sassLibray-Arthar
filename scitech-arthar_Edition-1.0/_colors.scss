@@ -6,4 +6,26 @@
     .bg-#{$key} {
         background-color: $val; // Tuottaa css tiedostoon kaikki värit. Esim: .bg-primary { background-color: #378cec; }
     }
+
+    // Vaaleat variaatiot ||| light
+    @for $i from 1 through 9 {
+        .text-#{$key}-light-#{$i} {
+            color: mix(white, $val, $i * 10%);
+        }
+        .bg-#{$key}-light-#{$i} {
+            background-color: mix(white, $val, $i * 10%);
+        }
+    }
+
+    // tummat variaatiot ||| dark
+    @for $i from 1 through 9 {
+        .text-#{$key}-dark-#{$i} {
+            color: mix(black, $val, $i * 10%);
+        }
+        .bg-#{$key}-dark-#{$i} {
+            background-color: mix(black, $val, $i * 10%);
+        } 
+    }       // Deprecation Warning: $weight: Passing a number without unit % (10) is deprecated.
+            // Edellinen tapa oli vanhentunut. % merkin lisääminen korjasi ongelman.
 }
+
