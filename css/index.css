@@ -31,13 +31,14 @@ img {
   display: block;
   padding: 0.75rem;
   border: 3px solid #0ee864;
+  border-radius: 5px;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
   margin: 30px;
   max-width: 400px;
 }
 .card .card-title {
   color: #7317c9;
-  font-size: 1rem;
+  font-size: 2rem;
   padding-bottom: 0.75rem;
   font-weight: bold;
 }
@@ -48,6 +49,11 @@ img {
   text-decoration: underline;
 }
 
+/*
+@debug $base-border-radius; // 20
+@debug math.div($base-border-radius, 4); // 5
+@debug math.max(12px, 20px, 55px, 43px); // 55px 
+*/
 /* -- styles -- */
 h1 {
   color: #378cec;

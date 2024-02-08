@@ -1,4 +1,4 @@
- // Variables ||| Theme colors
+ // Theme colors ||| Variables  
 
  $primary: #378cec;
  $primary2: #7317c9;
@@ -6,18 +6,23 @@
  $error: #da2222;
  $info: #f6f63f; 
 
- // Variables ||| spacing
+ // spacing ||| Variables 
 
  $base-padding: 0.75rem;
  $base-margin: 0.75rem;
 
- // Variables ||| Borders
+ // Borders ||| Variables  
 
  $base-border-thickness: 3px;
  $base-border-radius: 20px;
 
- // box-shadow
+ // box-shadow ||| Variables
  $base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
 
- // font sizes
+ // font sizes ||| Variables
  $base-font-size: 1rem;
+ $font-size-XS: $base-font-size * 0.5 ;
+ $font-size-S: $base-font-size * 0.75 ;
+ $font-size-L: $base-font-size * 1.5 ;
+ $font-size-XL: $base-font-size * 2 ;
+ $font-size-XXL: $base-font-size *3 ;

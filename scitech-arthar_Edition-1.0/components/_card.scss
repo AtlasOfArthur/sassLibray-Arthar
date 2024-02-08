@@ -1,14 +1,17 @@
+@use 'sass:math'; // Jos haluaa tehdä laskutoimituksia, täytyy käyttää matikka pakettia (math module)
+
 .card {
     display: block;
     padding: $base-padding;
     border: $base-border-thickness solid #0ee864;
+    border-radius: math.div($base-border-radius, 4); // Käyttää math modulia, jakaa(div) oletuksen neljällä
     box-shadow: $base-box-shadow;
     margin: 30px;
     max-width: 400px;
 
     .card-title{
         color: $primary2; 
-        font-size: $base-font-size;
+        font-size: $font-size-XL;
         padding-bottom: $base-padding;
         font-weight: bold;
     }
@@ -20,3 +23,9 @@
         }
     }
 }
+ // debug työkalu jolla voi näyttää erilaisia arvoja konsolissa. Pari esimerkkiä:
+/*
+@debug $base-border-radius; // 20
+@debug math.div($base-border-radius, 4); // 5
+@debug math.max(12px, 20px, 55px, 43px); // 55px 
+*/

@@ -3,6 +3,9 @@ Jos (npm\gulp.ps1 cannot be loaded because scripts is disabled on this system)
     Poistaa eston ps1-tiedostojen ajolta (ilmeisesti kyseisessä sijainnissa?)
     )Pitää ajaa joka kerta kun VS-code on käynnistetty(
 
+( !! HUOM !! ) 
+    Aja Five Server ensin. Sitten vasta gulp. Muuten voi jäädä jumiin.
+
 Tarkista että on asennettu
     node -v
     gulp -v
