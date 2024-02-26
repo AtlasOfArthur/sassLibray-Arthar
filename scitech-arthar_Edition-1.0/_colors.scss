@@ -1,31 +1,57 @@
 // https://youtu.be/I1lp8eSKmEs?list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&t=55
 @each $key, $val in $colors {
+
     .text-#{$key} {
-        color: $val;
+        color: $val
     }
+
+    .text-hover-#{$key} {
+        &:hover {
+            color: $val
+        }
+    }
+
     .bg-#{$key} {
         background-color: $val; // Tuottaa css tiedostoon kaikki värit. Esim: .bg-primary { background-color: #378cec; }
     }
 
-    // Vaaleat variaatiot ||| light
-    @for $i from 1 through 9 {
-        .text-#{$key}-light-#{$i} {
-            color: mix(white, $val, $i * 10%);
-        }
-        .bg-#{$key}-light-#{$i} {
-            background-color: mix(white, $val, $i * 10%);
-        }
-    }
+    @if($val != black and $val != white) { // Jättää huomiotta mustan ja valkoisen variaatiot
 
-    // tummat variaatiot ||| dark
-    @for $i from 1 through 9 {
-        .text-#{$key}-dark-#{$i} {
-            color: mix(black, $val, $i * 10%);
+        // Vaaleat variaatiot ||| light
+        // text
+        @for $i from 1 through 9 {
+            .text-#{$key}-light-#{$i} {
+                color: mix(white, $val, $i * 10%);
+            }
+            .text-hover-#{$key}-light-#{$i} {
+                &:hover {
+                    color: mix(white, $val, $i * 10%);
+                }
+        // background
+            }
+            .bg-#{$key}-light-#{$i} {
+                background-color: mix(white, $val, $i * 10%);
+            }
         }
-        .bg-#{$key}-dark-#{$i} {
-            background-color: mix(black, $val, $i * 10%);
-        } 
-    }       // Deprecation Warning: $weight: Passing a number without unit % (10) is deprecated.
+
+        
+        // tummat variaatiot ||| dark
+        // text
+        @for $i from 1 through 9 {
+            .text-#{$key}-dark-#{$i} {
+                color: mix(black, $val, $i * 10%);
+            }
+            .text-hover-#{$key}-dark-#{$i} {
+                &:hover {
+                    color: mix(black, $val, $i * 10%);
+                }
+        // background
+            }
+            .bg-#{$key}-dark-#{$i} {
+                background-color: mix(black, $val, $i * 10%);
+            } 
+        }   // Deprecation Warning: $weight: Passing a number without unit % (10) is deprecated.
             // Edellinen tapa oli vanhentunut. % merkin lisääminen korjasi ongelman.
+    }
 }
 

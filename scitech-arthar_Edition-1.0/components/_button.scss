@@ -1,0 +1,41 @@
+@mixin btn($bg-color: #e5e5e5e5) { // << nappien oletus
+          text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        border: 0;
+        padding: $base-padding $base-padding * 2;
+        border-radius: $base-border-radius;  
+        background-color: $bg-color;
+}
+
+.btn {
+    @include btn;
+}
+
+// https://www.youtube.com/watch?v=eW1nhSZaPEw&list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&index=12
+
+@each $key, $val in $colors { 
+    .btn-#{$key} {
+        @include btn($val);
+        &:hover {
+            background-color: lighten($val, 5);
+        }
+    }
+    .btn-outlined-#{$key} {
+        @include btn(#fff);
+        border: $base-border-thickness solid $val;
+        &:hover {
+            background-color: $val;
+        }
+    }   
+    // https://youtu.be/l0VljiUg2d0?list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&t=232
+    .btn-complement-#{$key} {
+        @include btn($val);
+        color: light-comp($val);
+        &:hover {
+            color: $val;
+            background-color: light-comp($val);
+        }
+    }
+    
+}

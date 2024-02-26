@@ -1,19 +1,24 @@
 
  // Muuttujat ja funktiot
+  @import 'functions';
   @import 'var'; // Linking to file: Variables 
 
  // Pohja ja sijoittelu
   @import 'base';
- // var ja base tiedostolla pitää olla edessä alaviiva, että gulp ei koosta tätä tiedostoa css tiedostoksi
+ // var, base ja monilla muilla tiedostolla pitää olla edessä alaviiva, että gulp ei koosta tätä tiedostoa css tiedostoksi
+  @import 'breakpoints';
+  @import 'grid';
+
 
  // Värit 
   @import 'colors';
 
   // Värit ||| (~painikkeet, kortit, nav-palkit)
     @import 'components/card';
+    @import 'components/button';
 
  // Hyödykkeet ~Utiliteetit ||| (~Margin, padding, läpinäkyvyys)
-
+   @import 'utilities';
 
 /* -- styles -- */
 

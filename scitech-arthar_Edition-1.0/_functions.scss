@@ -1,0 +1,6 @@
+// https://www.youtube.com/watch?v=l0VljiUg2d0&list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&index=13
+@function light-comp($color) { // comp = complementary color = vastaväri
+    $complement: complement($color);
+    $light-complement: lighten($complement, 20%);
+    @return $light-complement;
+}
